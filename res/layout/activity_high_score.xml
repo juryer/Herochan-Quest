@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 背景画像 -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/bg_highscore"
+        android:scaleType="centerCrop" />
+
+    <!-- コンテンツ（半透明オーバーレイで視認性確保） -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:background="#88000000"
+        android:padding="24dp">
+
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="🏆 ハイスコア"-->
+<!--            android:textSize="28sp"-->
+<!--            android:textColor="@color/gold"-->
+<!--            android:textStyle="bold"-->
+<!--            android:layout_marginBottom="8dp" />-->
+
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="トレーニングモード TOP5"-->
+<!--            android:textSize="14sp"-->
+<!--            android:textColor="@color/text_secondary"-->
+<!--            android:layout_marginBottom="32dp" />-->
+
+        <TextView
+            android:id="@+id/tvRank1"
+            android:layout_marginTop="180dp"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:text="1位：---"
+            android:textSize="22sp"
+            android:textColor="@color/gold"
+            android:textStyle="bold"
+            android:background="#AA000000"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/tvRank2"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:gravity="center"
+            android:text="2位：---"
+            android:textSize="20sp"
+            android:textColor="@color/text_primary"
+            android:background="#AA000000"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/tvRank3"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:gravity="center"
+            android:text="3位：---"
+            android:textSize="20sp"
+            android:textColor="@color/text_primary"
+            android:background="#AA000000"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/tvRank4"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:gravity="center"
+            android:text="4位：---"
+            android:textSize="18sp"
+            android:textColor="@color/text_secondary"
+            android:background="#AA000000"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/tvRank5"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:gravity="center"
+            android:text="5位：---"
+            android:textSize="18sp"
+            android:textColor="@color/text_secondary"
+            android:background="#AA000000"
+            android:layout_marginBottom="32dp" />
+
+        <Button
+            android:id="@+id/btnBack"
+            android:layout_width="200dp"
+            android:layout_height="48dp"
+            android:text="← 戻る"
+            android:textSize="16sp"
+            android:backgroundTint="@color/btn_secondary" />
+
+    </LinearLayout>
+
+</FrameLayout>

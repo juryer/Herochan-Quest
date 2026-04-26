@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 背景画像 -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/bg_howtoplay"
+        android:scaleType="centerCrop" />
+
+    <!-- コンテンツ -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#AA000000">
+
+        <!-- ヘッダー -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="8dp"
+            android:background="#BB000000">
+
+            <Button
+                android:id="@+id/btnBack"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:text="← 戻る"
+                android:textSize="12sp"
+                android:backgroundTint="@color/btn_secondary" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="📖 遊び方"
+                android:textSize="18sp"
+                android:textColor="@color/gold"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="80dp"
+                android:layout_height="1dp" />
+        </LinearLayout>
+
+        <!-- スクロールエリア -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <!-- 基本ルール -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="🎮 基本ルール"
+                    android:textSize="17sp"
+                    android:textColor="@color/gold"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="6dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="#BB000000"
+                    android:padding="12dp"
+                    android:layout_marginBottom="16dp">
+
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:text="数字パネルをなぞって、合計がぴったり10になるようにつなげよう！"
+                        android:textSize="13sp" android:textColor="@color/text_primary" android:layout_marginBottom="6dp" />
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:text="✅ 縦・横につながったパネルだけ選べるよ"
+                        android:textSize="13sp" android:textColor="@color/text_primary" android:layout_marginBottom="4dp" />
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:text="✅ 消えたパネルは飛び越えてつなげられるよ"
+                        android:textSize="13sp" android:textColor="@color/text_primary" android:layout_marginBottom="4dp" />
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:text="✅ 斜めにドラッグすると四角い範囲でまとめて選べるよ"
+                        android:textSize="13sp" android:textColor="@color/text_primary" android:layout_marginBottom="4dp" />
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:text="✅ 途中でなぞった場所まで戻るとラインを短くできるよ"
+                        android:textSize="13sp" android:textColor="@color/text_primary" />
+                </LinearLayout>
+
+                <!-- つなげるほど強くなる -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="⚔️ つなげるほど強くなる！"
+                    android:textSize="17sp"
+                    android:textColor="@color/gold"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="6dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="#BB000000"
+                    android:padding="12dp"
+                    android:layout_marginBottom="8dp">
+
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:text="パネルをたくさんつなげて10を作ると攻撃力がアップするよ！"
+                        android:textSize="13sp" android:textColor="@color/text_primary" android:layout_marginBottom="8dp" />
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:text="2〜3個 → 200　|　4個 → 250　|　5個 → 300　|　6個以上 → さらにアップ！"
+                        android:textSize="13sp" android:textColor="@color/gold" android:textStyle="bold" android:layout_marginBottom="8dp" />
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:text="さらに！同じターン中に何回も10を作るとコンボボーナスが加算されるよ！"
+                        android:textSize="13sp" android:textColor="@color/text_primary" android:layout_marginBottom="4dp" />
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:text="1回目:×1.0　2回目:×1.1　3回目:×1.2　…とどんどん倍率が上がるよ"
+                        android:textSize="12sp" android:textColor="@color/text_secondary" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="#BB000000"
+                    android:padding="12dp"
+                    android:layout_marginBottom="16dp">
+
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:text="⭐ ぴったり20を作ると…"
+                        android:textSize="14sp" android:textColor="@color/gold" android:textStyle="bold" android:layout_marginBottom="4dp" />
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:text="💥 800ダメージをプラスで与えられる！"
+                        android:textSize="13sp" android:textColor="@color/text_primary" android:layout_marginBottom="4dp" />
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:text="✨ 使ったキャラの必殺技がまた使えるようになる！（勇者除く）"
+                        android:textSize="13sp" android:textColor="@color/text_primary" />
+                </LinearLayout>
+
+                <!-- ダンジョンモード -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="⚔️ ダンジョンモード"
+                    android:textSize="17sp"
+                    android:textColor="@color/gold"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="6dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="#BB000000"
+                    android:padding="12dp"
+                    android:layout_marginBottom="8dp">
+
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:text="敵を倒してダンジョンを攻略しよう！"
+                        android:textSize="13sp" android:textColor="@color/text_primary" android:layout_marginBottom="6dp" />
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:text="① 「Attack」ボタンを押すと15秒の操作タイムが始まる"
+                        android:textSize="13sp" android:textColor="@color/text_primary" android:layout_marginBottom="4dp" />
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:text="② 数字をなぞって10を作ると敵にダメージを与えられる"
+                        android:textSize="13sp" android:textColor="@color/text_primary" android:layout_marginBottom="4dp" />
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:text="③ 時間が終わったら与えたダメージが確定して敵の反撃を受ける"
+                        android:textSize="13sp" android:textColor="@color/text_primary" android:layout_marginBottom="4dp" />
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:text="④ 敵のHPをゼロにすれば勝利！次のレベルに進める"
+                        android:textSize="13sp" android:textColor="@color/text_primary" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="#BB000000"
+                    android:padding="12dp"
+                    android:layout_marginBottom="16dp">
+
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:text="✨ キャラの必殺技（バースト）"
+                        android:textSize="14sp" android:textColor="@color/gold" android:textStyle="bold" android:layout_marginBottom="6dp" />
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:text="Attackボタンが表示中にキャラをタップして発動！各キャラ1回だけ使えるよ"
+                        android:textSize="12sp" android:textColor="@color/text_secondary" android:layout_marginBottom="8dp" />
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:text="👧 勇者「ゴーゴードライブ」"
+                        android:textSize="13sp" android:textColor="@color/text_primary" android:textStyle="bold" android:layout_marginBottom="2dp" />
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:text="　攻撃後の盤面でパネルの約30%を5に変えるよ！10が作りやすくなる"
+                        android:textSize="12sp" android:textColor="@color/text_secondary" android:layout_marginBottom="8dp" />
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:text="🐉 コドモドラゴン「ドラゴンソウル」"
+                        android:textSize="13sp" android:textColor="@color/text_primary" android:textStyle="bold" android:layout_marginBottom="2dp" />
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:text="　そのターンの攻撃を2回行うよ！"
+                        android:textSize="12sp" android:textColor="@color/text_secondary" android:layout_marginBottom="8dp" />
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:text="🦄 ユニコーン「ホーリーホーン」"
+                        android:textSize="13sp" android:textColor="@color/text_primary" android:textStyle="bold" android:layout_marginBottom="2dp" />
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:text="　与えたダメージの5倍分HPが回復するよ！"
+                        android:textSize="12sp" android:textColor="@color/text_secondary" />
+                </LinearLayout>
+
+                <!-- トレーニングモード -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="📚 トレーニングモード"
+                    android:textSize="17sp"
+                    android:textColor="@color/gold"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="6dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="#BB000000"
+                    android:padding="12dp"
+                    android:layout_marginBottom="32dp">
+
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:text="99秒以内にどれだけ高いスコアを出せるか挑戦しよう！"
+                        android:textSize="13sp" android:textColor="@color/text_primary" android:layout_marginBottom="6dp" />
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:text="⭐ ぴったり20を作ると → 1000点ゲット！"
+                        android:textSize="13sp" android:textColor="@color/gold" android:layout_marginBottom="4dp" />
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:text="⭐⭐ ぴったり30を作ると → 1500点＋パネルが全部リセット！"
+                        android:textSize="13sp" android:textColor="@color/gold" android:layout_marginBottom="10dp" />
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:text="✨ キャラの必殺技（バースト）"
+                        android:textSize="14sp" android:textColor="@color/gold" android:textStyle="bold" android:layout_marginBottom="6dp" />
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:text="キャラのアイコンをタップすると即発動！各キャラ1回だけ使えるよ"
+                        android:textSize="12sp" android:textColor="@color/text_secondary" android:layout_marginBottom="8dp" />
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:text="👧 勇者「ゴーゴードライブ」"
+                        android:textSize="13sp" android:textColor="@color/text_primary" android:textStyle="bold" android:layout_marginBottom="2dp" />
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:text="　パネルが全部新しくなる！行き詰まったときに使おう"
+                        android:textSize="12sp" android:textColor="@color/text_secondary" android:layout_marginBottom="8dp" />
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:text="🐉 コドモドラゴン「ドラゴンソウル」"
+                        android:textSize="13sp" android:textColor="@color/text_primary" android:textStyle="bold" android:layout_marginBottom="2dp" />
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:text="　次に加算されるスコアが3倍になるよ！"
+                        android:textSize="12sp" android:textColor="@color/text_secondary" android:layout_marginBottom="8dp" />
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:text="🦄 ユニコーン「ホーリーホーン」"
+                        android:textSize="13sp" android:textColor="@color/text_primary" android:textStyle="bold" android:layout_marginBottom="2dp" />
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:text="　パネルをランダムに5個消してつなげやすくするよ！"
+                        android:textSize="12sp" android:textColor="@color/text_secondary" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+</FrameLayout>

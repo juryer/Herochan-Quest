@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 背景画像 -->
+    <ImageView
+        android:id="@+id/ivDungeonBg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/bg_dungeon_menu"
+        android:scaleType="centerCrop" />
+
+<!--    &lt;!&ndash; タイトル看板 &ndash;&gt;-->
+<!--    <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_gravity="top|center_horizontal"-->
+<!--        android:layout_marginTop="32dp"-->
+<!--        android:text="Dungeon"-->
+<!--        android:textSize="36sp"-->
+<!--        android:textColor="#5C3A1E"-->
+<!--        android:textStyle="bold"-->
+<!--        android:fontFamily="serif" />-->
+
+    <!-- レベルリスト（看板直下に固定） -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvLevels"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:layout_marginTop="200dp"
+        android:padding="12dp"
+        android:clipToPadding="false" />
+
+    <!-- 戻るボタン（左下） -->
+    <Button
+        android:id="@+id/btnBack"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_gravity="bottom|start"
+        android:layout_margin="16dp"
+        android:text="← 戻る"
+        android:textSize="13sp"
+        android:textColor="#5C3A1E"
+        android:backgroundTint="#CCFFF8E7" />
+
+</FrameLayout>

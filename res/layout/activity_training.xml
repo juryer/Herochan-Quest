@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg_dark">
+
+    <!-- ===== ヘッダー ===== -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:background="@color/bg_panel">
+
+        <Button
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="42dp"
+            android:text="← 戻る"
+            android:textSize="11sp"
+            android:backgroundTint="@color/btn_secondary" />
+
+        <TextView
+            android:id="@+id/tvHighScore"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="ハイスコア: ---"
+            android:textColor="@color/gold"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="80dp"
+            android:layout_height="1dp" />
+
+    </LinearLayout>
+
+    <!-- ===== スコア＋タイマー ===== -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:background="@color/bg_panel">
+
+        <TextView
+            android:id="@+id/tvScore"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="0"
+            android:textSize="40sp"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/tvTimer"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:text="60"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="@color/timer_normal"
+            android:background="@color/bg_enemy_area" />
+
+    </LinearLayout>
+
+    <!-- ===== キャラエリア ===== -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/bg_panel"
+        android:padding="3dp">
+
+        <FrameLayout
+            android:id="@+id/panelChar1"
+            android:layout_width="0dp"
+            android:layout_height="83dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="3dp">
+
+            <ImageView
+                android:id="@+id/ivChar1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:text="盤面再生"
+                android:textSize="9sp"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:background="#AA4444CC"
+                android:padding="2dp" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/panelChar2"
+            android:layout_width="0dp"
+            android:layout_height="83dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="3dp">
+
+            <ImageView
+                android:id="@+id/ivChar2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:text="次回3倍"
+                android:textSize="9sp"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:background="#AA44AA44"
+                android:padding="2dp" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/panelChar3"
+            android:layout_width="0dp"
+            android:layout_height="83dp"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/ivChar3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:text="5個消去"
+                android:textSize="9sp"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:background="#AAAA44AA"
+                android:padding="2dp" />
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <!-- ===== グリッド＋隠し画像＋スタートボタン ===== -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <ImageView
+            android:id="@+id/ivHiddenImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:background="@color/bg_dark" />
+
+        <com.mathpuzzle.game.ui.battle.NumberGridView
+            android:id="@+id/numberGridView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:layerType="hardware" />
+
+        <Button
+            android:id="@+id/btnStart"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:layout_gravity="center"
+            android:text="START"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="@color/btn_primary" />
+
+    </FrameLayout>
+
+</LinearLayout>

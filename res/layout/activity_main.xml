@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/bg_main_menu"
+        android:scaleType="centerCrop" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="bottom|center_horizontal"
+        android:paddingBottom="220dp"
+        android:paddingStart="48dp"
+        android:paddingEnd="48dp">
+
+        <Button
+            android:id="@+id/btnDungeon"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:text="ダンジョン"
+            android:textSize="18sp"
+            android:textColor="#5C3A1E"
+            android:textStyle="bold"
+            android:backgroundTint="#CCFFF8E7"
+            android:layout_marginBottom="12dp" />
+
+        <Button
+            android:id="@+id/btnTraining"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:text="トレーニング"
+            android:textSize="18sp"
+            android:textColor="#5C3A1E"
+            android:textStyle="bold"
+            android:backgroundTint="#CCFFF8E7"
+            android:layout_marginBottom="12dp" />
+
+        <Button
+            android:id="@+id/btnHighScore"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:text="ハイスコア"
+            android:textSize="18sp"
+            android:textColor="#5C3A1E"
+            android:textStyle="bold"
+            android:backgroundTint="#CCFFF8E7" />
+
+    </LinearLayout>
+
+    <!-- 右下：遊び方＋設定ボタン（同じサイズで横並び） -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:orientation="horizontal"
+        android:layout_margin="16dp">
+
+        <Button
+            android:id="@+id/btnHowToPlay"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="📖 遊び方"
+            android:textSize="13sp"
+            android:textColor="#5C3A1E"
+            android:backgroundTint="#AAFFF8E7"
+            android:layout_marginEnd="8dp" />
+
+        <Button
+            android:id="@+id/btnSettings"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="⚙️ 設定"
+            android:textSize="13sp"
+            android:textColor="#5C3A1E"
+            android:backgroundTint="#AAFFF8E7" />
+
+    </LinearLayout>
+
+</FrameLayout>

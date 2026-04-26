@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg_dark">
+
+    <!-- ===== 敵エリア ===== -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="260dp">
+
+        <ImageView
+            android:id="@+id/ivBattleBg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop" />
+
+        <!-- 敵HP＋撤退ボタン -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#AA000000"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="6dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="エネミーHP "
+                    android:textColor="#FFFFFF"
+                    android:textSize="11sp" />
+
+                <ProgressBar
+                    android:id="@+id/progressEnemyHp"
+                    style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                    android:layout_width="0dp"
+                    android:layout_height="12dp"
+                    android:layout_weight="1"
+                    android:progressBackgroundTint="@color/hp_bg"
+                    android:progressTint="@color/hp_enemy" />
+
+                <TextView
+                    android:id="@+id/tvEnemyHp"
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:textColor="#FFFFFF"
+                    android:textSize="10sp" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnRetreat"
+                android:layout_width="72dp"
+                android:layout_height="34dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginBottom="2dp"
+                android:backgroundTint="#AA884422"
+                android:text="撤退"
+                android:textColor="#FFFFFF"
+                android:textSize="11sp" />
+
+        </LinearLayout>
+
+        <!-- 敵画像 -->
+        <ImageView
+            android:id="@+id/ivEnemy"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginBottom="4dp"
+            android:scaleType="fitCenter" />
+
+        <!-- タイマー -->
+        <TextView
+            android:id="@+id/tvTimer"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="top|end"
+            android:layout_marginTop="36dp"
+            android:layout_marginEnd="8dp"
+            android:gravity="center"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/timer_normal"
+            android:visibility="invisible" />
+
+        <!-- 20達成演出オーバーレイ -->
+        <LinearLayout
+            android:id="@+id/layoutSpecialMessage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="#CC000000"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="⚔ 20 達成！ ⚔"
+                android:textSize="22sp"
+                android:textColor="@color/gold"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:id="@+id/tvSpecialMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="16sp"
+                android:textColor="#FFFFFF"
+                android:gravity="center"
+                android:layout_marginBottom="4dp" />
+
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="💥 ブレイブソード！\n✨ 仲間のバーストがチャージされた！"-->
+<!--                android:textSize="13sp"-->
+<!--                android:textColor="@color/gold"-->
+<!--                android:gravity="center" />-->
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <!-- ===== キャラエリア ===== -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/bg_panel"
+        android:padding="3dp">
+
+        <FrameLayout
+            android:id="@+id/panelChar1"
+            android:layout_width="0dp"
+            android:layout_height="66dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="3dp">
+
+            <ImageView
+                android:id="@+id/ivChar1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/panelChar2"
+            android:layout_width="0dp"
+            android:layout_height="66dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="3dp">
+
+            <ImageView
+                android:id="@+id/ivChar2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/panelChar3"
+            android:layout_width="0dp"
+            android:layout_height="66dp"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/ivChar3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop" />
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <!-- ===== プレイヤーHPバー ===== -->
+    <LinearLayout
+        android:id="@+id/layoutPlayerArea"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:background="@color/bg_player_area">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="HP "
+            android:textColor="@color/hp_player"
+            android:textSize="11sp" />
+
+        <ProgressBar
+            android:id="@+id/progressPlayerHp"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="0dp"
+            android:layout_height="12dp"
+            android:layout_weight="1"
+            android:progressTint="@color/hp_player"
+            android:progressBackgroundTint="@color/hp_bg" />
+
+        <TextView
+            android:id="@+id/tvPlayerHp"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:textColor="@color/text_secondary"
+            android:textSize="10sp" />
+
+    </LinearLayout>
+
+    <!-- ===== グリッド＋攻撃ボタン ===== -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <com.mathpuzzle.game.ui.battle.NumberGridView
+            android:id="@+id/numberGridView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/bg_dark" />
+
+        <Button
+            android:id="@+id/btnAttack"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:text="Attack"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#CCCC3333" />
+
+        <TextView
+            android:id="@+id/tvPhaseMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|center_horizontal"
+            android:layout_marginTop="8dp"
+            android:padding="6dp"
+            android:background="#AA000000"
+            android:text=""
+            android:textColor="@color/text_primary"
+            android:textSize="12sp"
+            android:visibility="gone" />
+
+    </FrameLayout>
+
+</LinearLayout>
